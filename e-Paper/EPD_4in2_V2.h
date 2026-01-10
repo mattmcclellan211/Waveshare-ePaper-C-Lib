@@ -31,6 +31,10 @@
 #ifndef _EPD_4IN2_V2_H_
 #define _EPD_4IN2_V2_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "DEV_Config.h"
 
 // Display resolution
@@ -49,5 +53,9 @@ void EPD_4IN2_V2_Display_Fast(UBYTE *Image);
 void EPD_4IN2_V2_Display_4Gray(UBYTE *Image);
 void EPD_4IN2_V2_PartialDisplay(UBYTE *Image, UWORD x, UWORD y, UWORD w, UWORD l);
 void EPD_4IN2_V2_Sleep(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

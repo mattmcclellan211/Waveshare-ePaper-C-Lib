@@ -45,6 +45,11 @@
 #ifndef __GUI_BMPFILE_H
 #define __GUI_BMPFILE_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
 #include <stdio.h>
 #include <fcntl.h>
 #include <unistd.h>
@@ -91,4 +96,10 @@ UBYTE GUI_ReadBmp_16Gray(const char *path, UWORD Xstart, UWORD Ystart);
 UBYTE GUI_ReadBmp_RGB_4Color(const char *path, UWORD Xstart, UWORD Ystart);
 UBYTE GUI_ReadBmp_RGB_6Color(const char *path, UWORD Xstart, UWORD Ystart);
 UBYTE GUI_ReadBmp_RGB_7Color(const char *path, UWORD Xstart, UWORD Ystart);
+
+#ifdef __cplusplus
+}
+#endif
+
+
 #endif
