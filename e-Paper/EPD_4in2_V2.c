@@ -285,11 +285,13 @@ void EPD_4IN2_V2_Init_Fast(UBYTE Mode)
     EPD_4IN2_V2_ReadBusy();   
 	
     EPD_4IN2_V2_SendCommand(0x11);	// data  entry  mode
-    EPD_4IN2_V2_SendData(0x03);		// X-mode   
+    EPD_4IN2_V2_SendData(0x00);		// X-mode   
 		
-	EPD_4IN2_V2_SetWindows(0, 0, EPD_4IN2_V2_WIDTH-1, EPD_4IN2_V2_HEIGHT-1);
+	// EPD_4IN2_V2_SetWindows(0, 0, EPD_4IN2_V2_WIDTH-1, EPD_4IN2_V2_HEIGHT-1);
+    EPD_4IN2_V2_SetWindows(EPD_4IN2_V2_WIDTH-1, EPD_4IN2_V2_HEIGHT-1, 0, 0);
 	 
-	EPD_4IN2_V2_SetCursor(0, 0);
+	// EPD_4IN2_V2_SetCursor(0, 0);
+    EPD_4IN2_V2_SetCursor( (EPD_4IN2_V2_WIDTH-1)>>3, EPD_4IN2_V2_HEIGHT-1);
 	
     EPD_4IN2_V2_ReadBusy();
 }
